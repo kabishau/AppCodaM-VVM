@@ -12,6 +12,11 @@
 		6BC73225211A536300E276C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC73223211A536300E276C2 /* Main.storyboard */; };
 		6BC73227211A536300E276C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC73226211A536300E276C2 /* Assets.xcassets */; };
 		6BC7322A211A536300E276C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC73228211A536300E276C2 /* LaunchScreen.storyboard */; };
+		6BC73236211A542500E276C2 /* VC-Extension+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC73233211A542500E276C2 /* VC-Extension+TableViewDataSource.swift */; };
+		6BC73237211A542500E276C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC73234211A542500E276C2 /* DetailViewController.swift */; };
+		6BC73238211A542500E276C2 /* VC-Extension+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC73235211A542500E276C2 /* VC-Extension+TableViewDelegate.swift */; };
+		6BC7323D211A545D00E276C2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC7323C211A545D00E276C2 /* Model.swift */; };
+		6BC7323F211A546800E276C2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC7323E211A546800E276C2 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		6BC73226211A536300E276C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BC73229211A536300E276C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BC7322B211A536300E276C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BC73233211A542500E276C2 /* VC-Extension+TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC-Extension+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		6BC73234211A542500E276C2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6BC73235211A542500E276C2 /* VC-Extension+TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC-Extension+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		6BC7323C211A545D00E276C2 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6BC7323E211A546800E276C2 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,59 @@
 		6BC7321E211A536300E276C2 /* AppCodaMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				6BC7321F211A536300E276C2 /* AppDelegate.swift */,
-				6BC73221211A536300E276C2 /* ViewController.swift */,
-				6BC73223211A536300E276C2 /* Main.storyboard */,
+				6BC73240211A54C700E276C2 /* Model */,
+				6BC7323B211A544F00E276C2 /* View */,
+				6BC73241211A54CE00E276C2 /* ViewModel */,
+				6BC73232211A540300E276C2 /* Controller */,
+				6BC73231211A537800E276C2 /* Supporting Files */,
 				6BC73226211A536300E276C2 /* Assets.xcassets */,
-				6BC73228211A536300E276C2 /* LaunchScreen.storyboard */,
-				6BC7322B211A536300E276C2 /* Info.plist */,
 			);
 			path = "AppCodaM\bVVM";
+			sourceTree = "<group>";
+		};
+		6BC73231211A537800E276C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BC7321F211A536300E276C2 /* AppDelegate.swift */,
+				6BC7322B211A536300E276C2 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BC73232211A540300E276C2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6BC73221211A536300E276C2 /* ViewController.swift */,
+				6BC73234211A542500E276C2 /* DetailViewController.swift */,
+				6BC73233211A542500E276C2 /* VC-Extension+TableViewDataSource.swift */,
+				6BC73235211A542500E276C2 /* VC-Extension+TableViewDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6BC7323B211A544F00E276C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BC73223211A536300E276C2 /* Main.storyboard */,
+				6BC73228211A536300E276C2 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BC73240211A54C700E276C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BC7323C211A545D00E276C2 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BC73241211A54CE00E276C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BC7323E211A546800E276C2 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC73222211A536300E276C2 /* ViewController.swift in Sources */,
+				6BC73236211A542500E276C2 /* VC-Extension+TableViewDataSource.swift in Sources */,
+				6BC73238211A542500E276C2 /* VC-Extension+TableViewDelegate.swift in Sources */,
+				6BC7323D211A545D00E276C2 /* Model.swift in Sources */,
 				6BC73220211A536300E276C2 /* AppDelegate.swift in Sources */,
+				6BC73237211A542500E276C2 /* DetailViewController.swift in Sources */,
+				6BC7323F211A546800E276C2 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGW2M4R8BY;
-				INFOPLIST_FILE = "AppCodaM\bVVM/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AppCodaM\bVVM/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGW2M4R8BY;
-				INFOPLIST_FILE = "AppCodaM\bVVM/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AppCodaM\bVVM/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
